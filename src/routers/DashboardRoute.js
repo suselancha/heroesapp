@@ -9,6 +9,7 @@ import { SearchScreen } from '../components/search/SearchScreen'
 export const DashboardRoute = () => {
     return (
         <>
+            {/* Navbar no pertenece al Router, por eso le pasamos como props el  history */}
             <Navbar />  
 
             <div className="container mt-2">
