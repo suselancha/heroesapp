@@ -11,6 +11,9 @@ export const LoginScreen = ({ history }) => {
         //history.push('/');
         //history.replace('/');
 
+        //Si no existe (es la primera vez o borre el storage) va a '/'; sino vuelve donde se quedo el usuario
+        const lastPath = localStorage.getItem('lastPath') ||  '/';
+
         dispatch( {
             type: types.login,
             payload: {
@@ -18,7 +21,7 @@ export const LoginScreen = ({ history }) => {
             }
         });
 
-        history.replace('/');
+        history.replace(lastPath);
 
 
     }
